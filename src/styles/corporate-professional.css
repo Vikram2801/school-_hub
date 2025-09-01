@@ -1,0 +1,67 @@
+/* Corporate Professional Design */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap');
+
+.corporate-professional {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.corporate-professional .hero-corporate {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+  position: relative;
+}
+
+.corporate-professional .hero-corporate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="corporate-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23corporate-grid)"/></svg>');
+}
+
+.corporate-professional .professional-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.corporate-professional .professional-card:hover {
+  border-color: #2563eb;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.corporate-professional .btn-corporate {
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.corporate-professional .btn-corporate:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.corporate-professional .nav-corporate {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.corporate-professional .text-corporate {
+  font-family: 'IBM Plex Serif', serif;
+  color: #1f2937;
+  line-height: 1.6;
+}

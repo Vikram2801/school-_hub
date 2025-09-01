@@ -1,0 +1,103 @@
+/* Luxury Elegant Design */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap');
+
+.luxury-elegant {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.luxury-elegant .hero-luxury {
+  background: linear-gradient(135deg, #2c1810 0%, #8b4513 50%, #d4af37 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-elegant .hero-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="luxury-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20,5 L35,20 L20,35 L5,20 Z" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23luxury-pattern)"/></svg>');
+}
+
+.luxury-elegant .elegant-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-elegant .elegant-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #f4d03f, #d4af37);
+}
+
+.luxury-elegant .elegant-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.15),
+    0 12px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.luxury-elegant .btn-luxury {
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  padding: 12px 32px;
+  color: #2c1810;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-elegant .btn-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.luxury-elegant .btn-luxury:hover::before {
+  opacity: 1;
+}
+
+.luxury-elegant .btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.luxury-elegant .nav-luxury {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.luxury-elegant .text-luxury {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
