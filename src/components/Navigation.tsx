@@ -6,12 +6,12 @@ const Navigation = () => {
   const location = useLocation();
 
   return (
-    <nav className="bg-card border-b border-border sticky top-0 z-50 shadow-sm">
+    <nav className="nav-themed sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link 
             to="/" 
-            className="flex items-center space-x-2 text-primary hover:text-primary-hover transition-colors"
+            className="flex items-center space-x-2 hover:opacity-80 transition-all duration-300"
           >
             <GraduationCap className="h-8 w-8" />
             <span className="text-xl font-bold">SchoolHub</span>
@@ -19,9 +19,8 @@ const Navigation = () => {
           
           <div className="flex space-x-2">
             <Button
-              variant={location.pathname === "/add-school" ? "default" : "ghost"}
+              className={`nav-button ${location.pathname === "/add-school" ? "active" : ""}`}
               asChild
-              className="flex items-center space-x-2"
             >
               <Link to="/add-school">
                 <Plus className="h-4 w-4" />
@@ -30,9 +29,8 @@ const Navigation = () => {
             </Button>
             
             <Button
-              variant={location.pathname === "/schools" ? "default" : "ghost"}
+              className={`nav-button ${location.pathname === "/schools" ? "active" : ""}`}
               asChild
-              className="flex items-center space-x-2"
             >
               <Link to="/schools">
                 <Grid3X3 className="h-4 w-4" />

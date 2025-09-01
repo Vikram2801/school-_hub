@@ -1,0 +1,205 @@
+/* Color Variants for Navigation and Components */
+
+/* Vibrant Purple Theme */
+.theme-purple {
+  --nav-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --nav-text: #ffffff;
+  --nav-hover: rgba(255, 255, 255, 0.1);
+  --card-bg: linear-gradient(145deg, #f8f9ff 0%, #e8ecff 100%);
+  --card-border: #c7d2fe;
+  --button-primary: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  --button-hover: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+  --accent-color: #8b5cf6;
+}
+
+/* Ocean Blue Theme */
+.theme-ocean {
+  --nav-bg: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  --nav-text: #ffffff;
+  --nav-hover: rgba(255, 255, 255, 0.1);
+  --card-bg: linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 100%);
+  --card-border: #7dd3fc;
+  --button-primary: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  --button-hover: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  --accent-color: #06b6d4;
+}
+
+/* Sunset Orange Theme */
+.theme-sunset {
+  --nav-bg: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  --nav-text: #ffffff;
+  --nav-hover: rgba(255, 255, 255, 0.1);
+  --card-bg: linear-gradient(145deg, #fff7ed 0%, #fed7aa 100%);
+  --card-border: #fdba74;
+  --button-primary: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --button-hover: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  --accent-color: #f59e0b;
+}
+
+/* Forest Green Theme */
+.theme-forest {
+  --nav-bg: linear-gradient(135deg, #059669 0%, #047857 100%);
+  --nav-text: #ffffff;
+  --nav-hover: rgba(255, 255, 255, 0.1);
+  --card-bg: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
+  --card-border: #86efac;
+  --button-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --button-hover: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  --accent-color: #10b981;
+}
+
+/* Rose Pink Theme */
+.theme-rose {
+  --nav-bg: linear-gradient(135deg, #e11d48 0%, #be185d 100%);
+  --nav-text: #ffffff;
+  --nav-hover: rgba(255, 255, 255, 0.1);
+  --card-bg: linear-gradient(145deg, #fff1f2 0%, #fce7e8 100%);
+  --card-border: #fda4af;
+  --button-primary: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+  --button-hover: linear-gradient(135deg, #be185d 0%, #9f1239 100%);
+  --accent-color: #f43f5e;
+}
+
+/* Midnight Dark Theme */
+.theme-midnight {
+  --nav-bg: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  --nav-text: #f1f5f9;
+  --nav-hover: rgba(241, 245, 249, 0.1);
+  --card-bg: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+  --card-border: #475569;
+  --button-primary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --button-hover: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  --accent-color: #3b82f6;
+}
+
+/* Emerald Luxury Theme */
+.theme-emerald {
+  --nav-bg: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+  --nav-text: #ecfdf5;
+  --nav-hover: rgba(236, 253, 245, 0.1);
+  --card-bg: linear-gradient(145deg, #ecfdf5 0%, #d1fae5 100%);
+  --card-border: #6ee7b7;
+  --button-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --button-hover: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  --accent-color: #10b981;
+}
+
+/* Apply theme styles */
+[class*="theme-"] .nav-themed {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+[class*="theme-"] .nav-themed a {
+  color: var(--nav-text);
+  transition: all 0.3s ease;
+}
+
+[class*="theme-"] .nav-themed .nav-button {
+  background: var(--nav-hover);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--nav-text);
+  transition: all 0.3s ease;
+}
+
+[class*="theme-"] .nav-themed .nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+[class*="theme-"] .nav-themed .nav-button.active {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[class*="theme-"] .card-themed {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[class*="theme-"] .card-themed:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+}
+
+[class*="theme-"] .button-themed {
+  background: var(--button-primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+[class*="theme-"] .button-themed:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+[class*="theme-"] .accent-text {
+  color: var(--accent-color);
+}
+
+[class*="theme-"] .accent-border {
+  border-color: var(--accent-color);
+}
+
+/* Theme-specific hero backgrounds */
+.theme-purple .hero-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.theme-ocean .hero-bg {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+.theme-sunset .hero-bg {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+}
+
+.theme-forest .hero-bg {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.theme-rose .hero-bg {
+  background: linear-gradient(135deg, #e11d48 0%, #be185d 100%);
+}
+
+.theme-midnight .hero-bg {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.theme-emerald .hero-bg {
+  background: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+}
+
+/* Animated background patterns */
+[class*="theme-"] .hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  animation: float-pattern 6s ease-in-out infinite alternate;
+}
+
+@keyframes float-pattern {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-10px) rotate(1deg); }
+}

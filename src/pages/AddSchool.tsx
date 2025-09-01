@@ -87,10 +87,10 @@ const AddSchool = () => {
             <p className="text-muted-foreground">Fill in the details to add a new school to the directory</p>
           </div>
 
-          <Card className="shadow-lg border-border">
+          <Card className="card-themed shadow-2xl">
             <CardHeader className="space-y-1">
               <CardTitle className="text-2xl flex items-center gap-2">
-                <School className="h-6 w-6 text-primary" />
+                <School className="h-6 w-6 accent-text animate-float" />
                 School Information
               </CardTitle>
               <CardDescription>
@@ -112,7 +112,7 @@ const AddSchool = () => {
                       required: "School name is required",
                       minLength: { value: 2, message: "Name must be at least 2 characters" }
                     })}
-                    className="h-11"
+                    className="h-11 accent-border focus:accent-border"
                   />
                   {errors.name && (
                     <p className="text-sm text-destructive">{errors.name.message}</p>
@@ -122,14 +122,14 @@ const AddSchool = () => {
                 {/* Address */}
                 <div className="space-y-2">
                   <Label htmlFor="address" className="text-sm font-medium flex items-center gap-2">
-                    <MapPin className="h-4 w-4" />
+                    <MapPin className="h-4 w-4 accent-text" />
                     Address *
                   </Label>
                   <Input
                     id="address"
                     placeholder="Enter complete address"
                     {...register("address", { required: "Address is required" })}
-                    className="h-11"
+                    className="h-11 accent-border focus:accent-border"
                   />
                   {errors.address && (
                     <p className="text-sm text-destructive">{errors.address.message}</p>
@@ -146,7 +146,7 @@ const AddSchool = () => {
                       id="city"
                       placeholder="Enter city"
                       {...register("city", { required: "City is required" })}
-                      className="h-11"
+                      className="h-11 accent-border focus:accent-border"
                     />
                     {errors.city && (
                       <p className="text-sm text-destructive">{errors.city.message}</p>
@@ -161,7 +161,7 @@ const AddSchool = () => {
                       id="state"
                       placeholder="Enter state"
                       {...register("state", { required: "State is required" })}
-                      className="h-11"
+                      className="h-11 accent-border focus:accent-border"
                     />
                     {errors.state && (
                       <p className="text-sm text-destructive">{errors.state.message}</p>
@@ -173,7 +173,7 @@ const AddSchool = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="contact" className="text-sm font-medium flex items-center gap-2">
-                      <Phone className="h-4 w-4" />
+                      <Phone className="h-4 w-4 accent-text" />
                       Contact Number *
                     </Label>
                     <Input
@@ -187,7 +187,7 @@ const AddSchool = () => {
                         },
                         minLength: { value: 10, message: "Contact must be at least 10 digits" }
                       })}
-                      className="h-11"
+                      className="h-11 accent-border focus:accent-border"
                     />
                     {errors.contact && (
                       <p className="text-sm text-destructive">{errors.contact.message}</p>
@@ -196,7 +196,7 @@ const AddSchool = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="email_id" className="text-sm font-medium flex items-center gap-2">
-                      <Mail className="h-4 w-4" />
+                      <Mail className="h-4 w-4 accent-text" />
                       Email Address *
                     </Label>
                     <Input
@@ -210,7 +210,7 @@ const AddSchool = () => {
                           message: "Please enter a valid email address"
                         }
                       })}
-                      className="h-11"
+                      className="h-11 accent-border focus:accent-border"
                     />
                     {errors.email_id && (
                       <p className="text-sm text-destructive">{errors.email_id.message}</p>
@@ -221,7 +221,7 @@ const AddSchool = () => {
                 {/* Image Upload */}
                 <div className="space-y-2">
                   <Label htmlFor="image" className="text-sm font-medium flex items-center gap-2">
-                    <Upload className="h-4 w-4" />
+                    <Upload className="h-4 w-4 accent-text" />
                     School Image *
                   </Label>
                   <Input
@@ -229,7 +229,7 @@ const AddSchool = () => {
                     type="file"
                     accept="image/*"
                     {...register("image", { required: "School image is required" })}
-                    className="h-11 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-primary file:text-primary-foreground file:hover:bg-primary-hover"
+                    className="h-11 accent-border focus:accent-border file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:button-themed file:text-white"
                   />
                   {errors.image && (
                     <p className="text-sm text-destructive">{errors.image.message}</p>
@@ -241,7 +241,7 @@ const AddSchool = () => {
                       <img
                         src={previewImage}
                         alt="School preview"
-                        className="w-full max-w-xs mx-auto rounded-lg shadow-md"
+                        className="w-full max-w-xs mx-auto rounded-lg shadow-lg accent-border border-2"
                       />
                     </div>
                   )}
@@ -251,7 +251,7 @@ const AddSchool = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full h-12 text-base font-medium bg-gradient-to-r from-primary to-primary-hover hover:shadow-lg transition-all duration-200"
+                  className="button-themed w-full h-12 text-base font-medium"
                 >
                   {isSubmitting ? "Adding School..." : "Add School"}
                 </Button>

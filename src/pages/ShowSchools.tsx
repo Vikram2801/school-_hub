@@ -126,7 +126,7 @@ const ShowSchools = () => {
               placeholder="Search schools by name, city, or state..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 h-11"
+              className="pl-10 h-11 accent-border focus:accent-border"
             />
           </div>
         </div>
@@ -135,7 +135,7 @@ const ShowSchools = () => {
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, index) => (
-              <Card key={index} className="overflow-hidden animate-pulse">
+              <Card key={index} className="card-themed overflow-hidden animate-pulse">
                 <div className="h-48 bg-muted"></div>
                 <CardContent className="p-4">
                   <div className="h-4 bg-muted rounded mb-2"></div>
@@ -157,7 +157,7 @@ const ShowSchools = () => {
             {/* Schools Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredSchools.map((school) => (
-                <Card key={school.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+                <Card key={school.id} className="card-themed overflow-hidden group">
                   <div className="relative overflow-hidden">
                     <img
                       src={school.image}
@@ -165,7 +165,7 @@ const ShowSchools = () => {
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-3 right-3">
-                      <Badge variant="secondary" className="bg-background/90 text-foreground">
+                      <Badge variant="secondary" className="bg-white/90 text-foreground accent-border">
                         <School className="h-3 w-3 mr-1" />
                         School
                       </Badge>
@@ -179,7 +179,7 @@ const ShowSchools = () => {
                     
                     <div className="space-y-2">
                       <div className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                        <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 accent-text" />
                         <div>
                           <p className="line-clamp-1">{school.address}</p>
                           <p className="font-medium text-foreground">
@@ -196,7 +196,7 @@ const ShowSchools = () => {
             {/* No Results */}
             {filteredSchools.length === 0 && !isLoading && (
               <div className="text-center py-12">
-                <School className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                <School className="h-12 w-12 accent-text mx-auto mb-4 animate-float" />
                 <h3 className="text-lg font-medium text-foreground mb-2">No schools found</h3>
                 <p className="text-muted-foreground">
                   Try adjusting your search terms or browse all schools.
