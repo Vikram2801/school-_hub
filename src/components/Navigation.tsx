@@ -6,7 +6,7 @@ const Navigation = () => {
   const location = useLocation();
 
   return (
-    <nav className="nav-themed sticky top-0 z-50 shadow-lg">
+    <nav className="nav-themed sticky top-0 z-50 shadow-lg bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link 

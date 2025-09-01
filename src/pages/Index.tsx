@@ -6,21 +6,21 @@ import Navigation from "../components/Navigation";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen ">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="hero-bg relative py-20 px-4 overflow-hidden">
+      <section className=" py-20 px-4">
         <div className="container mx-auto text-center max-w-4xl">
           <div className="mb-8">
             <div className="relative">
-              <GraduationCap className="h-16 w-16 text-white mx-auto mb-6 animate-float" />
-              <div className="absolute inset-0 h-16 w-16 mx-auto mb-6 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+              <GraduationCap className="h-16 w-16 text-primary mx-auto mb-6 animate-float" />
+              <div className="absolute inset-0 h-16 w-16 mx-auto mb-6 rounded-full blur-xl animate-pulse"></div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-dark mb-6">
               Welcome to <span className="accent-text font-extrabold">SchoolHub</span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-dark/90 mb-8 max-w-2xl mx-auto">
               Your comprehensive platform for managing school information. Add, view, and discover schools in your area with ease.
             </p>
           </div>
@@ -32,8 +32,8 @@ const Index = () => {
                 Add New School
               </Link>
             </Button>
-            
-            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base bg-white/10 border-white/30 text-white hover:bg-white/20">
+
+            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-base bg-muted/10 hover:bg-primary/20">
               <Link to="/schools" className="flex items-center gap-2">
                 <Grid3X3 className="h-5 w-5" />
                 Browse Schools
@@ -44,11 +44,11 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/30">
+      <section className=" py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Why Choose SchoolHub?</h2>
-            <p className="text-lg text-muted-foreground">Streamlined school management made simple</p>
+            <p className="text-lg">Streamlined school management made simple</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -86,10 +86,10 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className=" py-20 px-4 py-20 px-4">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl font-bold text-foreground mb-4">Ready to Get Started?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg mb-8">
             Join thousands of educators and administrators using SchoolHub to manage their school directory
           </p>
           
